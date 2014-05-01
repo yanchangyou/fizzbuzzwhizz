@@ -1,0 +1,77 @@
+html,body{
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+.container {
+	height: 100%;	
+	text-align: center;	
+	padding: 20px;
+}
+
+.title-1 {
+	text-align: center;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	font-size: 25px;
+	font-weight: bold;
+}
+.title-12 {
+	float: right;
+	padding-right: 25%;
+	font-size: 16px;
+}
+
+
+.modules {
+	height: 100%;
+}
+
+.module {
+	display: inline-block;
+	float: left;
+	width: 100%;
+	height: 20%;
+}
+.title-2 {
+	width: 20%;	
+	display: inline-block;
+	float: left;
+	font-size: 18px;
+	font-weight: bolder;
+	height: 100%;
+}
+.answers {
+	display: inline-block;
+	float: left;
+	width: 80%;	
+	height: 100%;
+}
+.answers div {
+	display: inline-block;
+	float: left;
+	width: 20%;
+	height: 100%;
+}
+
+.answers div:hover
+ {
+	background:#e0e0e0;
+	cursor: pointer;
+	color: #fff;
+}
+
+.title-1:hover {	
+	background:#eee;
+}
+.module:hover
+ {
+	background:#eee;
+}
+
+div.answers-ass {
+	display: block;
+	width: 100%;
+	height: 46%;	
+}
