@@ -2,7 +2,8 @@ html,body{
 	height:100%;
 	margin: 0px;
 	padding: 0px;
-	overflow: hidden;
+	background:#f7f7f7;
+	overflow:hidden;
 }
 .container {
 	height: 100%;	
@@ -53,13 +54,14 @@ html,body{
 	float: left;
 	width: 20%;
 	height: 100%;
+	font-size: 130%;
+	font-weight:bold;
 }
 
 .answers div:hover
  {
-	background:#e0e0e0;
+	background:#e7e7e7;
 	cursor: pointer;
-	color: #fff;
 }
 
 .title-1:hover {	
@@ -73,5 +75,20 @@ html,body{
 div.answers-ass {
 	display: block;
 	width: 100%;
-	height: 46%;	
+	height: 40%;	
 }
+#h-1:hover {color: #800000;}
+#h-2:hover {color: #900000;}
+#h-3:hover {color: #a00000;}
+#h-4:hover {color: #b00000;}
+#h-5:hover {color: #e00000;}
+#s-1:hover {color: #008000;}
+#s-2:hover {color: #009000;}
+#s-3:hover {color: #00a000;}
+#s-4:hover {color: #00b000;}
+#s-5:hover {color: #00e000;}
+#d-1:hover {color: #000080;}
+#d-2:hover {color: #000090;}
+#d-3:hover {color: #0000a0;}
+#d-4:hover {color: #0000b0;}
+#d-5:hover {color: #0000e0;}
