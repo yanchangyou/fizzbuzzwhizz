@@ -6,13 +6,17 @@
 }
 .input div{
 	float: left;
-	width: 300px;
+	width: auto;
+	margin-left: 50px;
 }
 .input div label {
 	width: auto;
 }
 
-.input select,.input input {
+.input select {
+	width: 50px;
+}
+.input input {
 	width: 50px;
 }
 
