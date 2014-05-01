@@ -1,0 +1,22 @@
+
+
+.input {
+	text-align: center;
+	padding-top: 50px;
+}
+.input div{
+	float: left;
+	width: 300px;
+}
+.input div label {
+	width: auto;
+}
+
+.input select,.input input {
+	width: 50px;
+}
+
+#result {
+	padding-top: 50px;
+	margin-left: 50px;
+}

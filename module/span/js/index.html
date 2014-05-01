@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset='utf-8' />
+		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
+		<meta name="description" content="Fizzbuzzwhizz : fizzbuzzwhizz ThoughtWorks" />
+
+		<link rel="stylesheet" type="text/css" media="screen" href="css/style.css">
+		<script src="js/fizzbuzzwhizz.js"></script>
+
+		<title>fizzbuzzwhizz-span-js</title>
+	</head>
+
+	<body>
+		<div class="input">	
+			<div>
+				<label>学生个数：</label><input id="student_numbers" value="100">
+			</div>	
+			<div>
+				<label>选择三个数：</label>
+				<select id="num1"></select>
+				<select id="num2"></select>
+				<select id="num3"></select>
+			</div>
+			<div>
+				<button id="btn_count_off" onClick="count_off();">报数</button>
+			</div>
+		</div>
+		<div id="result">result
+		</div>
+			
+		<script>
+		
+			function initNum() {
+				var optionsHtml = "";
+				for(var i=2; i<10; i++) {
+					optionsHtml += '<option value="' + i + '">' + i + '</option>';
+				}
+				document.getElementById("num1").innerHTML = optionsHtml;
+				document.getElementById("num2").innerHTML = optionsHtml;
+				document.getElementById("num3").innerHTML = optionsHtml;
+				
+				document.getElementById("num1").selectedIndex = 1;
+				document.getElementById("num2").selectedIndex = 3;
+				document.getElementById("num3").selectedIndex = 5;
+				
+			}
+			
+			initNum();
+		
+			function count_off() {
+				var num1 = document.getElementById("num1").value;
+				var num2 = document.getElementById("num2").value;
+				var num3 = document.getElementById("num3").value;
+				
+				var diffNumbers = [num1-0, num2-0, num3-0];
+				
+				var fizzbuzzwhizz_set = ["fizz","buzz", "whizz"];
+				var student_numbers = document.getElementById("student_numbers").value;				
+				
+				var result = countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set);
+				
+				if(result) {
+						
+					var result_html = "";
+					
+					for(var i=0; i<result.length; i++) {
+						result_html += (i+1) + " : " + result[i] + "<br>";
+					}
+					
+					document.getElementById("result").innerHTML = result_html;
+					
+				}
+			}
+			
+		</script>
+		
+			
+			
+		<script src="js/duoshuo.js"></script>
+		<script type="text/javascript" src="js/google-analytics.js"></script>
+	</body>
+</html>
