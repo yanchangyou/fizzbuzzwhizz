@@ -75,7 +75,31 @@ div.answers-ass {
 	display: block;
 	width: 100%;
 	height: 40%;	
+	text-align: right;
 }
+
+div.answers-ass img {
+	width:  20%;
+	height: 90%;	
+	margin-top: 10%;
+	margin-right: 7%;
+}
+
+div.answers-ass img.done {
+	display: none;
+}
+
+
+.answers div:hover img.done
+ {
+	display:inline;
+}
+
+.answers div:hover img.done-gray
+ {
+	display: none;
+}
+
 #h-1:hover {color: #800000;}
 #h-2:hover {color: #900000;}
 #h-3:hover {color: #a00000;}
@@ -101,3 +125,6 @@ SCROLLBAR-HIGHLIGHT-COLOR:#f7f7f7;
 SCROLLBAR-3DLIGHT-COLOR:#f7f7f7;
 SCROLLBAR-SHADOW-COLOR:#f7f7f7;
 SCROLLBAR-TRACK-COLOR:#f7f7f7;}
+
+
+
