@@ -72,6 +72,9 @@
 			initNum();
 		
 			function count_off() {
+			
+				document.getElementById("result").innerHTML = "";
+							
 				var num1 = document.getElementById("num1").value;
 				var num2 = document.getElementById("num2").value;
 				var num3 = document.getElementById("num3").value;
@@ -85,8 +88,10 @@
 				var result = countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set);
 				var time_end = new Date().getTime();
 				
-				document.getElementById("cost_time").innerHTML = (time_end-time_begin) + "毫秒";
-				
+				var cost_time = (time_end-time_begin);
+
+				document.getElementById("cost_time").innerHTML = cost_time + "毫秒";
+								
 				if(result) {
 						
 					var result_html = "";
@@ -95,8 +100,7 @@
 						result_html += result[i] + "<br>";
 					}
 					
-					document.getElementById("result").innerHTML = result_html;
-					
+					document.getElementById("result").innerHTML = result_html;					
 				}
 			}
 			
