@@ -35,7 +35,10 @@
 							v1
 						</div>
 						<div id="h-2">
-							<div class="answers-ass"><img class="done-gray" src="img/done-gray.png"></img><img class="done" src="img/done.png"></img> </div>
+							<div class="answers-ass">
+								<img class="done-gray" src="img/done-gray.png"></img>
+								<img class="done" src="img/done.png"></img>
+							</div>
 							v2
 						</div>
 						<div id="h-3">
@@ -63,12 +66,19 @@
 							css
 						</div>
 						<div id="s-2">
-							<div class="answers-ass"><img class="done-gray" src="img/done-gray.png"></img><img class="done" src="img/done.png"></img> </div>
+							<div class="answers-ass">
+								<img class="done-gray" src="img/done-gray.png"></img>
+								<img class="done" src="img/done.png"></img>
+							</div>
 							js
 						</div>
 						<div id="s-3">
-							<div class="answers-ass"></div>
-							java</div>
+							<div class="answers-ass">
+								<img class="done-gray" src="img/done-gray.png"></img>
+								<img class="done" src="img/done.png"></img>
+							</div>
+							java
+						</div>
 						<div id="s-4">
 							<div class="answers-ass"></div>
 							sql
@@ -90,7 +100,10 @@
 							v1
 						</div>
 						<div id="d-2">
-							<div class="answers-ass"><img class="done-gray" src="img/done-gray.png"></img><img class="done" src="img/done.png"></img> </div>
+							<div class="answers-ass">
+								<img class="done-gray" src="img/done-gray.png"></img>
+								<img class="done" src="img/done.png"></img>
+							</div>
 							v2</div>
 						<div id="d-3">
 							<div class="answers-ass"></div>
@@ -109,16 +122,22 @@
 			</div>
 		</div>
 		
-		<script>
-		
+		<script>		
 		
 			function openJs() {
 				window.open("module/span/js/index.html");
 			}
+			
+			function openJava() {
+				alert("提示：在下一个页面，点击fork，然后点击 Run 执行，在stdout位置看结果");
+				window.open("https://ideone.com/4aXjUp");
+			}
 		
 			document.getElementById("h-2").onclick = openJs;
 			document.getElementById("s-2").onclick = openJs;
-			document.getElementById("d-2").onclick = openJs;
+			document.getElementById("d-2").onclick = openJs;			
+			
+			document.getElementById("s-3").onclick = openJava;			
 			
 		</script>
 		
