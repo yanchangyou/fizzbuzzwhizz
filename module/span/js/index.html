@@ -74,7 +74,8 @@
 			function count_off() {
 			
 				document.getElementById("result").innerHTML = "";
-							
+				document.getElementById("cost_time").innerHTML = "";
+				
 				var num1 = document.getElementById("num1").value;
 				var num2 = document.getElementById("num2").value;
 				var num3 = document.getElementById("num3").value;
@@ -84,23 +85,20 @@
 				var fizzbuzzwhizz_set = ["Fizz","Buzz", "Whizz"];
 				var student_numbers = document.getElementById("student_numbers").value;
 				
-				if (student_numbers >= 100000) {
-				
-					alert("耗时长");
-					
+				if (student_numbers >= 100000) {				
+					alert("耗时长");					
 				}
 				
 				var time_begin = new Date().getTime();
 				var result = countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set);
-				var time_end = new Date().getTime();
-				
-				var cost_time = (time_end-time_begin);
-
-				document.getElementById("cost_time").innerHTML = cost_time + "毫秒";
-				
 				
 				if(result) {
-						
+				
+					var time_end = new Date().getTime();	
+					var cost_time = (time_end-time_begin);
+
+					document.getElementById("cost_time").innerHTML = cost_time + "毫秒";
+				
 					var result_html = "";
 					
 					for(var i=0; i<result.length; i++) {
