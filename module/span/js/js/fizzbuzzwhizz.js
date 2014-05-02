@@ -31,8 +31,7 @@ function countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set) {
 		alert(errMsg);
 		return result;
 	}
-	
-	
+		
 	result = [];
 	for(var i=0; i<student_numbers; i++) {		
 		result[i] = countOffAt(i+1, diffNumbers, fizzbuzzwhizz_set);
@@ -45,29 +44,13 @@ function countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set) {
 */
 function countOffAt(index, diffNumbers, fizzbuzzwhizz_set) {
 	
-	var result = index;
-	
-	//规则5
-	for(var i=0; i<diffNumbers.length; i++) {		
-		if((""+index).indexOf(diffNumbers[i]) > -1) {
-			result = fizzbuzzwhizz_set[i];
-			break;
-		}
+	var rule5 = ((""+index).indexOf(diffNumbers[0]) > -1)?fizzbuzzwhizz_set[0]:"";
+	var rule3_4 = "";
+	var baseRule = index;
+	for(var i=0; i<diffNumbers.length; i++) {
+		rule3_4 +=(index%diffNumbers[i]==0)?fizzbuzzwhizz_set[i]:"";
 	}
-	
-	if (result === index) {
-		result = "";
-		//规则3,4
-		for(var i=0; i<diffNumbers.length; i++) {		
-			if(index % diffNumbers[i] === 0) {
-				result += fizzbuzzwhizz_set[i];
-			}
-		}
-		if (result === "") {
-			result = index;
-		}
-	}
-	return result;
+	return rule5||rule3_4||baseRule;
 }
 
 /**
@@ -81,13 +64,13 @@ function checkDiffNumbers(diffNumbers) {
 	}
 	for(var i=0; i<diffNumbers.length; i++) {
 		if(!checkNum(diffNumbers[i])) {
-			errMsg += "第" + i + "个(" +diffNumbers[i] + ")必须是个位数\r\n";
+			errMsg += "第" + (i+1) + "个(" +diffNumbers[i] + ")必须是个位数\r\n";
 		}
 	}
 	for(var i=0; i<diffNumbers.length-1; i++) {
 		for(var j=i+1; j<diffNumbers.length; j++) {
 			if(diffNumbers[i] === diffNumbers[j]) {				
-				errMsg += "数字不能相同，第" + i + "个和第" + j + "个相同\r\n";
+				errMsg += "数字不能相同，第" + (i+1) + "个和第" + (j+1) + "个相同\r\n";
 			}
 		}
 	}
