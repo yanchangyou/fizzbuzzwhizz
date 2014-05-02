@@ -11,9 +11,9 @@
 	计算报数结果
 	
 	参数
-	student_numbers ： 学生个数
-	diffNumbers ： 多个不同的个位数
-	fizzbuzzwhizz_set : 替换位置
+	student_numbers   ： 学生个数
+	diffNumbers       ： 多个不同的个位数
+	fizzbuzzwhizz_set :  替换设置
 	
 	返回报数结果数组
 */
@@ -35,9 +35,9 @@ function countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set) {
 	result = [];
 	
 	for(var i=1; i<=student_numbers; i++) {
-		result[i-1] = rule5(i, diffNumbers, fizzbuzzwhizz_set) 
-					 || rule3_rule4(i, diffNumbers, fizzbuzzwhizz_set)
-					 || i; //base rule
+		result[i-1] = rule5(i, diffNumbers, fizzbuzzwhizz_set)  //rule5
+		              || rule3_rule4(i, diffNumbers, fizzbuzzwhizz_set) //rule3,rule4
+		              || i; //base rull
 	}
 	return result;	
 }
