@@ -33,26 +33,31 @@ function countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set) {
 	}
 		
 	result = [];
-	for(var i=0; i<student_numbers; i++) {		
-		result[i] = countOffAt(i+1, diffNumbers, fizzbuzzwhizz_set);
+	
+	for(var i=1; i<=student_numbers; i++) {
+		result[i-1] = rule5(i, diffNumbers, fizzbuzzwhizz_set) 
+					 || rule3_rule4(i, diffNumbers, fizzbuzzwhizz_set)
+					 || i; //base rule
 	}
 	return result;	
 }
 
-/**
-	第i个人报数
-*/
-function countOffAt(index, diffNumbers, fizzbuzzwhizz_set) {
-	
-	var rule5 = ((""+index).indexOf(diffNumbers[0]) > -1)?fizzbuzzwhizz_set[0]:"";
-	var rule3_4 = "";
-	var baseRule = index;
-	for(var i=0; i<diffNumbers.length; i++) {
-		rule3_4 +=(index%diffNumbers[i]==0)?fizzbuzzwhizz_set[i]:"";
-	}
-	
-	return rule5||rule3_4||baseRule;
+function rule_base(index) {
+	return index;
 }
+
+function rule3_rule4(index, diffNumbers, fizzbuzzwhizz_set) {
+	var result = "";
+	for(var i=0; i<diffNumbers.length; i++) {
+		result +=(index%diffNumbers[i]==0)?fizzbuzzwhizz_set[i]:"";
+	}
+	return result;
+}
+
+function rule5(index, diffNumbers, fizzbuzzwhizz_set) {
+	return ((""+index).indexOf(diffNumbers[0]) > -1)?fizzbuzzwhizz_set[0]:"";
+}
+
 
 /**
 	检查各不相同的数组

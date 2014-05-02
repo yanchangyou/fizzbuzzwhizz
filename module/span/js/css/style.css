@@ -25,8 +25,8 @@ html,body{
 .input select {
 	width: 50px;
 }
-.input input {
-	width: 50px;
+#student_numbers {
+	width: 70px;
 }
 
 #result {
