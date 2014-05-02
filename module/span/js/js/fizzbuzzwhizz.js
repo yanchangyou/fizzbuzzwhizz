@@ -1,4 +1,10 @@
 
+/**
+	author   :  yanchangyou@gmail.com
+	weibo    :  http://weibo.com/ghcc
+	QQ       :  328950700
+	website  :  http://www.yanchangyou.cn/poem/
+*/
 
 /**
 
