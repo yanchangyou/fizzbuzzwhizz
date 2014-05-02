@@ -31,9 +31,39 @@ function countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set) {
 	for(var i=0; i<student_numbers; i++) {		
 		result[i] = countOffAt(i+1, diffNumbers, fizzbuzzwhizz_set);
 	}
-	return result;
-	
+	return result;	
 }
+
+/**
+	第i个人报数
+*/
+function countOffAt(index, diffNumbers, fizzbuzzwhizz_set) {
+	
+	var result = index;
+	
+	//规则5
+	for(var i=0; i<diffNumbers.length; i++) {		
+		if((""+index).indexOf(diffNumbers[i]) > -1) {
+			result = fizzbuzzwhizz_set[i];
+			break;
+		}
+	}
+	
+	if (result === index) {
+		result = "";
+		//规则3,4
+		for(var i=0; i<diffNumbers.length; i++) {		
+			if(index % diffNumbers[i] === 0) {
+				result += fizzbuzzwhizz_set[i];
+			}
+		}
+		if (result === "") {
+			result = index;
+		}
+	}
+	return result;
+}
+
 /**
 	检查各不相同的数组
 */
@@ -69,33 +99,4 @@ function checkNum(num) {
 */
 function check_student_numbers(student_numbers) {
 	return student_numbers && !isNaN(student_numbers) && (0 < student_numbers);
-}
-/**
-	第i个人报数
-*/
-function countOffAt(index, diffNumbers, fizzbuzzwhizz_set) {
-	
-	var result = index;
-	
-	//规则5
-	for(var i=0; i<diffNumbers.length; i++) {		
-		if((""+index).indexOf(diffNumbers[i]) > -1) {
-			result = fizzbuzzwhizz_set[i];
-			break;
-		}
-	}
-	
-	if (result === index) {
-		result = "";
-		//规则3,4
-		for(var i=0; i<diffNumbers.length; i++) {		
-			if(index % diffNumbers[i] === 0) {
-				result += fizzbuzzwhizz_set[i];
-			}
-		}
-		if (result === "") {
-			result = index;
-		}
-	}
-	return result;
 }
