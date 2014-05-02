@@ -50,6 +50,7 @@ function countOffAt(index, diffNumbers, fizzbuzzwhizz_set) {
 	for(var i=0; i<diffNumbers.length; i++) {
 		rule3_4 +=(index%diffNumbers[i]==0)?fizzbuzzwhizz_set[i]:"";
 	}
+	
 	return rule5||rule3_4||baseRule;
 }
 
