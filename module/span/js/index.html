@@ -37,6 +37,10 @@
 			</div>
 			<div>
 				<button id="btn_count_off" onClick="count_off();">报数</button>
+			</div>	
+			<div>
+				<label>耗时：</label>
+				<span id="cost_time"></span>
 			</div>
 		</div>
 		<div id="result"><span>点击报数按钮查看结果</span>
@@ -75,9 +79,13 @@
 				var diffNumbers = [num1-0, num2-0, num3-0];
 				
 				var fizzbuzzwhizz_set = ["Fizz","Buzz", "Whizz"];
-				var student_numbers = document.getElementById("student_numbers").value;				
+				var student_numbers = document.getElementById("student_numbers").value;
 				
+				var time_begin = new Date().getTime();
 				var result = countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set);
+				var time_end = new Date().getTime();
+				
+				document.getElementById("cost_time").innerHTML = (time_end-time_begin) + "毫秒";
 				
 				if(result) {
 						
