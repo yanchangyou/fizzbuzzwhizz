@@ -4,10 +4,6 @@ html,body{
 	padding: 0px;
 }
 
-.problem-from {
-	margin: 20px;
-	margin-left: 50px;
-}
 .input {
 	text-align: center;
 	padding-top: 10px;
@@ -51,4 +47,13 @@ html,body{
 }
 #cost_time {
 	color: green;
+}
+
+
+.problem-from {
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+.problem-from  a {
+	margin-left: 50px;
 }
