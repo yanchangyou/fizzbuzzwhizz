@@ -33,12 +33,18 @@
 		
 			function initNum() {
 				var optionsHtml = "";
-				for(var i=2; i<10; i++) {
-					optionsHtml += '<option value="' + i + '">' + i + '</option>';
+				var nums = [];
+				for(var i=0; i<3; i++) {
+					nums[i] = document.getElementById("num" + (i+1));
 				}
-				document.getElementById("num1").innerHTML = optionsHtml;
-				document.getElementById("num2").innerHTML = optionsHtml;
-				document.getElementById("num3").innerHTML = optionsHtml;
+				for(var i=2; i<10; i++) {
+					for(var j=0; j<nums.length; j++) {
+						var option = document.createElement("option");
+						option.value = i;
+						option.text = i;
+						nums[j].add(option);
+					}					
+				}
 				
 				document.getElementById("num1").selectedIndex = 1;
 				document.getElementById("num2").selectedIndex = 3;

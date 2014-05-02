@@ -1,8 +1,13 @@
-
+html,body{
+	height:100%;
+	margin: 0px;
+	padding: 0px;
+}
 
 .input {
 	text-align: center;
 	padding-top: 50px;
+	width: 90%;
 }
 .input div{
 	float: left;
@@ -26,4 +31,6 @@
 	height: auto;
 	min-height: 150px;
 	margin-bottom: 50px;
+	width : 90%;
+	display:block;
 }
