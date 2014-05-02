@@ -36,12 +36,14 @@
 				<select id="num3"></select>
 			</div>
 			<div>
+				学生编号<input type="checkbox" id="show_no">
+				&nbsp;&nbsp;&nbsp;
 				<button id="btn_count_off" onClick="count_off();">报数</button>
-			</div>	
-			<div>
-				<label>耗时：</label>
-				<span id="cost_time"></span>
-			</div>
+			</div>			
+		</div>
+		<div id="cost_time_div">
+			<label>耗时：</label>
+			<span id="cost_time"></span>
 		</div>
 		<div id="result"><span>点击报数按钮查看结果</span>
 		</div>
@@ -99,11 +101,19 @@
 
 					document.getElementById("cost_time").innerHTML = cost_time + "毫秒";
 				
+					var is_show_no = document.getElementById("show_no").checked;
 					var result_html = "";
 					
-					for(var i=0; i<result.length; i++) {
-						result_html += result[i] + "<br>";
+					if(is_show_no) {
+						for(var i=0; i<result.length; i++) {
+							result_html += (((student_numbers*10) + (i+1)) + " : ").substr(1)  + result[i] + "<br>";
+						}
+					} else {
+						for(var i=0; i<result.length; i++) {
+							result_html += result[i] + "<br>";
+						}
 					}
+					
 					
 					document.getElementById("result").innerHTML = result_html;					
 				}

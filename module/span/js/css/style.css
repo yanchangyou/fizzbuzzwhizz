@@ -29,8 +29,15 @@ html,body{
 	width: 70px;
 }
 
-#result {
+#cost_time_div {
+
 	padding-top: 40px;
+	margin-left: 50px;
+	width : 90%;
+	display:block;
+}
+#result {
+	padding-top: 10px;
 	margin-left: 50px;
 	height: auto;
 	min-height: 150px;
@@ -40,5 +47,8 @@ html,body{
 }
 
 #result span {
-	color : red;	
+	color : red;
+}
+#cost_time {
+	color: green;
 }
