@@ -130,7 +130,10 @@
 		<script>		
 		
 			function openCSS() {
-				alert("CSS版只支持IE版本（IE6，IE7，IE8，IE9，IE10）");
+				if(!document.all || navigator.appVersion.match(/11./i)) {					
+					alert("CSS版只支持IE版本（IE6，IE7，IE8，IE9，IE10）");
+					return;
+				}
 				window.open("module/span/css/index.html");
 			}
 		
