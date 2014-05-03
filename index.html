@@ -60,7 +60,10 @@
 					</div>				
 					<div class="answers">
 						<div id="s-1">
-							<div class="answers-ass"></div>
+							<div class="answers-ass">
+								<img class="done-gray" src="img/done-gray.png"></img>
+								<img class="done" src="img/done.png"></img>
+							</div>
 							css
 						</div>
 						<div id="s-2">
@@ -126,6 +129,11 @@
 		
 		<script>		
 		
+			function openCSS() {
+				alert("CSS版只支持IE7，IE6版本");
+				window.open("module/span/css/index.html");
+			}
+		
 			function openJs() {
 				window.open("module/span/js/index.html");
 			}
@@ -144,6 +152,8 @@
 				window.open("module/span/excel/FizzBuzzWhizz.xls");
 			}
 		
+			document.getElementById("s-1").onclick = openCSS;
+			
 			document.getElementById("s-2").onclick = openJs;
 			
 			document.getElementById("s-3").onclick = openJava;

@@ -1,0 +1,37 @@
+
+#fizzbuzzwhizz li {
+	list-style: none;
+	width: 100%;
+}
+
+#fizzbuzzwhizz li span.rule-5 { 
+	width: expression(this.parentNode.children[0].innerText.indexOf('3')==-1 ? '0px' : 'auto');
+	display:inline-block;
+	overflow: hidden;
+}
+#fizzbuzzwhizz li span.rule-34-1 {
+	width: expression((this.parentNode.children[0].innerText.indexOf('3')==-1 && this.parentNode.children[0].innerText % 3 === 0) ? 'auto' : '0px');
+	display:inline-block;
+	overflow: hidden;
+}
+
+#fizzbuzzwhizz li span.rule-34-2 {
+	width: expression((this.parentNode.children[0].innerText.indexOf('3')==-1 && this.parentNode.children[0].innerText % 5 === 0) ? 'auto' : '0px');
+	display:inline-block;
+	overflow: hidden;
+}
+
+#fizzbuzzwhizz li span.rule-34-3 {
+	width: expression((this.parentNode.children[0].innerText.indexOf('3')==-1 && this.parentNode.children[0].innerText % 7 === 0) ? 'auto' : '0px');
+	display:inline-block;
+	overflow: hidden;
+}
+
+#fizzbuzzwhizz li span.base-rule {
+	width: expression(((this.parentNode.children[0].innerText.indexOf('3')==-1) && (this.parentNode.children[0].innerText % 3)&&(this.parentNode.children[0].innerText % 5)&&(this.parentNode.children[0].innerText % 7)) ? 'atuo' : '0px');
+	display:inline-block;
+	overflow: hidden;
+}
+#fizzbuzzwhizz li:hover{
+	background: #f0f0f0;
+}
