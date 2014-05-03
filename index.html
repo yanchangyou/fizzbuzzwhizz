@@ -82,7 +82,10 @@
 							sql
 						</div>
 						<div id="s-5">
-							<div class="answers-ass"></div>
+							<div class="answers-ass">
+								<img class="done-gray" src="img/done-gray.png"></img>
+								<img class="done" src="img/done.png"></img>
+							</div>
 							excel
 						</div>
 					</div>
@@ -127,11 +130,17 @@
 			function openJava() {
 				alert("提示：在下一个页面，点击fork，然后点击 Run 执行，在stdout位置看结果");
 				window.open("https://ideone.com/4aXjUp");
+			}			
+			
+			function openExcel() {
+				window.open("module/span/excel/FizzBuzzWhizz.xls");
 			}
 		
-			document.getElementById("s-2").onclick = openJs;		
+			document.getElementById("s-2").onclick = openJs;
 			
-			document.getElementById("s-3").onclick = openJava;			
+			document.getElementById("s-3").onclick = openJava;
+			
+			document.getElementById("s-5").onclick = openExcel;
 			
 		</script>
 		
