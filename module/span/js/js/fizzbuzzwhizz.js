@@ -4,6 +4,7 @@
 	weibo    :  http://weibo.com/ghcc
 	QQ       :  328950700
 	website  :  http://www.yanchangyou.cn/poem/
+	github   :  https://github.com/yanchangyou
 */
 
 /**
@@ -37,7 +38,7 @@ function countOff(student_numbers, diffNumbers, fizzbuzzwhizz_set) {
 	for(var i=1; i<=student_numbers; i++) {
 		result[i-1] = rule5(i, diffNumbers, fizzbuzzwhizz_set)  //rule5
 		              || rule3_rule4(i, diffNumbers, fizzbuzzwhizz_set) //rule3,rule4
-		              || i; //base rull
+		              || i; //base rule
 	}
 	return result;	
 }
